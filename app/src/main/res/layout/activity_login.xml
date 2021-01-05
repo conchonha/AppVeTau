@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.page.user.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/mRLHello"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/layout_login">
+
+        <TextView
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:id="@+id/mTVHello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="Good Morning, Login to Train Ticks"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/mEDTUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mRLHello"
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:hint="@string/nh_p_s_i_n_tho_i" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mBTNLogin"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_below="@id/mEDTUser"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/btn_login"
+        android:backgroundTint="@color/bacground"
+        android:text="@string/ng_nh_p"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mBTNRegister"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:gravity="center"
+        android:text="@string/no_acount"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mBTNRegister"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_login"
+        android:backgroundTint="@color/black"
+        android:text="@string/ng_k"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>
