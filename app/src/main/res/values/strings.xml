@@ -47,4 +47,5 @@
     <string name="please_choice_time">Vui lòng chọn thời gian </string>
     <string name="no_reponse_sever">Không tìm thấy kết quả</string>
     <string name="chon_chuyen_tau">Chọn chuyến tàu</string>
+    <string name="chon_ve_tau">Chọn Vé Tàu</string>
 </resources>

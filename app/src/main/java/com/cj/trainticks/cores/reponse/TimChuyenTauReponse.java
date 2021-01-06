@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class TimChuyenTauReponse {
-
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -38,6 +37,9 @@ public class TimChuyenTauReponse {
     @SerializedName("NGAYDI")
     @Expose
     private String nGAYDI;
+    @SerializedName("TENTAU")
+    @Expose
+    private String tENTAU;
 
     public Integer getId() {
         return id;
@@ -127,4 +129,11 @@ public class TimChuyenTauReponse {
         this.nGAYDI = nGAYDI;
     }
 
+    public String getTENTAU() {
+        return tENTAU;
+    }
+
+    public void setTENTAU(String tENTAU) {
+        this.tENTAU = tENTAU;
+    }
 }

@@ -13,19 +13,27 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.TrainTicks">
-        <activity android:name=".src.page.traindetail.TrainDetailActivity"></activity>
-        <activity android:name=".src.page.user.RegisterActivity" />
-        <activity android:name=".src.page.home.TuyenTauActivity" />
-        <activity android:name=".src.page.home.ShowListChuyenTauActivity" />
-        <activity android:name=".src.page.splash.SplashActivity">
+        <activity android:name=".src.page.traindetail.TrainDetailActivity"/>
+        <activity android:name=".src.page.user.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".src.page.home.TuyenTauActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".src.page.home.ShowListChuyenTauActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".src.page.home.ChonVeTauActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".src.page.splash.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".src.page.user.LoginActivity" />
-        <activity android:name=".src.page.main.MainActivity" />
+        <activity android:name=".src.page.user.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".src.page.main.MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
