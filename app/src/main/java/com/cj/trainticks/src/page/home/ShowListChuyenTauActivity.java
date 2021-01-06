@@ -67,8 +67,9 @@ public class ShowListChuyenTauActivity extends BaseActivity implements View.OnCl
         }
     }
 
-    public void adapterItemClicked(int maChuyen){
-        startActivity(new Intent(getApplicationContext(),ChonVeTauActivity.class).putExtra(Constain.keyMaChuyen,maChuyen));
+    public void adapterItemClicked(TimChuyenTauReponse tauReponse){
+        String reponse = mGson.toJson(tauReponse);
+        startActivity(new Intent(getApplicationContext(),ChonVeTauActivity.class).putExtra(Constain.keyMaChuyen,reponse));
         overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
     }
 

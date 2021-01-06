@@ -43,11 +43,8 @@ public class ShowListChuyenTauAdapter extends RecyclerView.Adapter<ShowListChuye
         holder.mTxtDiaDiem2.setText(tauReponse.getGADEN());
         holder.mTxtTenTau.setText(tauReponse.getTENTAU());
 
-        holder.mCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mContext.adapterItemClicked(tauReponse.getId());
-            }
+        holder.mCardView.setOnClickListener(v->{
+            mContext.adapterItemClicked(tauReponse);
         });
 
         //so sanh t/g tau di

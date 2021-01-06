@@ -1,6 +1,7 @@
 package com.cj.trainticks.cores.services;
 
 import com.cj.trainticks.cores.body.RegisterBody;
+import com.cj.trainticks.cores.reponse.GetToaTauReponse;
 import com.cj.trainticks.model.Tuyen;
 
 import java.util.List;
@@ -30,4 +31,7 @@ public interface DataService {
     @POST("Tuyen/timChuyenTau")
     Call<Map>timChuyenTau(@Field("gadi") String gadi,@Field("gaden") String gaden,@Field("thoigian") String thoigian);
 
+    @FormUrlEncoded
+    @POST("Tuyen/getToaTauTheoChuyen")
+    Call<GetToaTauReponse>getToaTauTheoChuyen(@Field("tentau") String tentau);
 }
