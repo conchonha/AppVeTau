@@ -9,6 +9,8 @@
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginBottom="2dp"
         android:id="@+id/card_item_tuyen"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:cardElevation="7dp"
         app:cardCornerRadius="@dimen/_4sdp"
         android:layout_marginTop="@dimen/_10sdp"

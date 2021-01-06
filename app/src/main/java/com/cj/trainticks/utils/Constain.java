@@ -10,8 +10,10 @@ public class Constain {
    public static final String type_tuyen = "type_tuyen";
    public static final String Tuyen = "Tuyen";
    public static final String keyGaDi = "keyGaDi";
+   public static final String keyListChuyenTau = "keyListChuyenTau";
    //-------------------variable
    public static  String EMAIL = "thaibasang08081999@gmail.com";
    public static  String PASS = "TranThiDieuXuan25012006";
    public static String[] object = { "1 Người Lớn", "2 Sinh viên, hoc sinh", "3 Trẻ em", "4 Người cao tuổi"};
+
 }

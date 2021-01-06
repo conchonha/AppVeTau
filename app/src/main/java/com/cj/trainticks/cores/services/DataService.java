@@ -25,4 +25,9 @@ public interface DataService {
     //-----------------------Tuyen---------------------------------
     @GET("Tuyen/getAllTuyen")
     Call<List<Tuyen>>getAllTuyen();
+
+    @FormUrlEncoded
+    @POST("Tuyen/timChuyenTau")
+    Call<Map>timChuyenTau(@Field("gadi") String gadi,@Field("gaden") String gaden,@Field("thoigian") String thoigian);
+
 }

@@ -45,4 +45,5 @@
     <string name="please_choice_ga_di">Vui lòng chọn ga đi </string>
     <string name="please_choice_ga_den">Vui lòng chọn ga đến </string>
     <string name="please_choice_time">Vui lòng chọn thời gian </string>
+    <string name="no_reponse_sever">Không tìm thấy kết quả</string>
 </resources>

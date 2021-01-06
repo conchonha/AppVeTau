@@ -16,6 +16,7 @@
         <activity android:name=".src.page.traindetail.TrainDetailActivity"></activity>
         <activity android:name=".src.page.user.RegisterActivity" />
         <activity android:name=".src.page.home.TuyenTauActivity" />
+        <activity android:name=".src.page.home.ShowListChuyenTauActivity" />
         <activity android:name=".src.page.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
