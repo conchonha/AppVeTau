@@ -3,7 +3,6 @@ package com.cj.trainticks.src.adapter.home;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -49,7 +48,7 @@ public class ShowListChuyenTauAdapter extends RecyclerView.Adapter<ShowListChuye
 
         //so sanh t/g tau di
         Calendar calendar = Calendar.getInstance();
-        int h = calendar.get(Calendar.HOUR);
+        int h = calendar.get(Calendar.HOUR_OF_DAY);
         int h1 = Integer.parseInt(tauReponse.getGIODI().substring(0,2));
         if(h1 < h){
             holder.mCardView.setCardBackgroundColor(R.color.xam);

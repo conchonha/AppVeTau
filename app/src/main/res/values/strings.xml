@@ -48,4 +48,7 @@
     <string name="no_reponse_sever">Không tìm thấy kết quả</string>
     <string name="chon_chuyen_tau">Chọn chuyến tàu</string>
     <string name="chon_ve_tau">Chọn Vé Tàu</string>
+    <string name="chon_toa_cho_ngoi">Chọn Toa + Chỗ Ngồi</string>
+    <string name="toa">Toa</string>
+    <string name="vui_long_chon_toa">Vui lòng chọn toa</string>
 </resources>

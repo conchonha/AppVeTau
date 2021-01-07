@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/img_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/img_back"
-            android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:src="@drawable/ic_back"
-            android:elevation="@dimen/_15ssp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:clickable="true"
+            android:elevation="@dimen/_15ssp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back" />
 
         <TextView
             android:id="@+id/mTVHome"
@@ -29,33 +30,103 @@
             android:textSize="25sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
+                android:id="@+id/liner_1"
                 android:layout_width="match_parent"
-                android:background="#7D8EED"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#7D8EED">
+
                 <ImageView
                     android:layout_width="@dimen/_35sdp"
                     android:layout_height="@dimen/_35sdp"
-                    android:src="@drawable/ic_tau_hoa"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"/>
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:src="@drawable/ic_tau_hoa" />
+
                 <TextView
+                    android:id="@+id/txt_ten_chuyen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/_10ssp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
                     android:text=""
-                    android:id="@+id/txt_ten_chuyen"/>
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/liner_1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/chon_toa_cho_ngoi"
+                android:textColor="#000"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/liner_2"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="#7D8EED"
+                    android:gravity="center"
+                    android:text="@string/toa"
+                    android:textColor="#fff"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_toa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_1"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/liner_2"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="#B1D8F8"
+                    android:gravity="center"
+                    android:id="@+id/txt_thong_tin_toa"
+                    android:maxLines="1"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:text="@string/vui_long_chon_toa"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerviewghe"/>
             </LinearLayout>
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
