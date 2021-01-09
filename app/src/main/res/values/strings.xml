@@ -51,4 +51,8 @@
     <string name="chon_toa_cho_ngoi">Chọn Toa + Chỗ Ngồi</string>
     <string name="toa">Toa</string>
     <string name="vui_long_chon_toa">Vui lòng chọn toa</string>
+    <string name="tiep_tuc">Tiếp Tục</string>
+    <string name="tong_tien">Tổng tiền</string>
+    <string name="cho">Chỗ</string>
+    <string name="chon_toi_da_ve_tau">Chỉ được chọn tối đa 4 vé</string>
 </resources>

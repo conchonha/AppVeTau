@@ -39,4 +39,8 @@ public interface DataService {
     @FormUrlEncoded
     @POST("Tuyen/getVetau")
     Call<List<VeTau>>getVetau(@Field("toaid") String toaid);
+
+    @FormUrlEncoded
+    @POST("Tuyen/datve")
+    Call<Map>datVeTau(@Field("maChuyen") String maChuyen,@Field("arrayVe") String ve);
 }

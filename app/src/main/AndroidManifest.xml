@@ -22,6 +22,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".src.page.home.ChonVeTauActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".src.page.home.ThongTinDatVeActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".src.page.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>

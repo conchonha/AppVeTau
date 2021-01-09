@@ -103,11 +103,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                                     showAlertDialog(mGson.toJson(response.body().get("message")));
                                 } else {
                                     showToast(getString(R.string.success));
-                                    String strUser = mGson.toJson(response.body().get("data"));
-                                    mSharePrefs.saveUser(strUser);
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
+                                    finish();
                                 }
                             } else {
                                 showAlertDialog(response.message());

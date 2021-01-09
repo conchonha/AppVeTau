@@ -24,6 +24,10 @@ public class VetauAdapter extends RecyclerView.Adapter<VetauAdapter.GheViewhodle
         this.mContext = mContext;
     }
 
+    public void thayList(List<VeTau>list){
+        this.mList = list;
+    }
+
     @NonNull
     @Override
     public GheViewhodler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,13 +39,22 @@ public class VetauAdapter extends RecyclerView.Adapter<VetauAdapter.GheViewhodle
     public void onBindViewHolder(@NonNull GheViewhodler holder, int position) {
         VeTau veTau = mList.get(position);
         holder.mTxtGia.setText(veTau.getGIAVE().toString()+"k");
-        holder.mTxtMaGhe.setText(veTau.getGheId().toString());
+        holder.mTxtMaGhe.setText(veTau.getSOGHE().toString());
         if(veTau.getStatus() == 1){
             holder.mLinerLayout.setBackgroundResource(R.color.mau_do);
             holder.mTxtGia.setTextColor(R.color.white);
             holder.mTxtMaGhe.setTextColor(R.color.white);
             holder.mCardVe.setEnabled(false);
         }
+        if(veTau.getmCheck()){
+            holder.mLinerLayout.setBackgroundResource(R.color.colorPrimary);
+        }
+
+        holder.mCardVe.setOnClickListener(v->{
+//            veTau.setmCheck(true);
+//            notifyItemChanged(position);
+            mContext.onclicedItemVeTauAdapter(veTau);
+        });
     }
 
     @Override

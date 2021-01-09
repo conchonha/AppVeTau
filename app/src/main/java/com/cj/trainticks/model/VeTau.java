@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class VeTau {
-
+    private Boolean mCheck = false;
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -41,6 +41,9 @@ public class VeTau {
     @SerializedName("GIAVE")
     @Expose
     private Integer gIAVE;
+    @SerializedName("TenToa")
+    @Expose
+    private String tenToa;
 
     public Integer getId() {
         return id;
@@ -138,4 +141,19 @@ public class VeTau {
         this.gIAVE = gIAVE;
     }
 
+    public String getTenToa() {
+        return tenToa;
+    }
+
+    public void setTenToa(String tenToa) {
+        this.tenToa = tenToa;
+    }
+
+    public Boolean getmCheck() {
+        return mCheck;
+    }
+
+    public void setmCheck(Boolean mCheck) {
+        this.mCheck = mCheck;
+    }
 }
