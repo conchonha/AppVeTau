@@ -27,7 +27,7 @@
             android:layout_height="?actionBarSize"
             android:background="@color/bacground"
             android:gravity="center"
-            android:text="Chi tiết đặt vé"
+            android:text="@string/chi_tiet_dat_ve"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:text="Thông tin khách đi tàu"
+                    android:text="@string/thong_tin_khach_di_tau"
                     android:textColor="#000"
                     android:textSize="@dimen/_14ssp" />
 
@@ -65,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_8sdp"
                     app:cardElevation="@dimen/_3sdp">
 
@@ -92,6 +93,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:text="Tàu SE7"
+                                    android:id="@+id/txtTenTau"
                                     android:textColor="#000"
                                     android:textSize="@dimen/_14ssp"
                                     android:textStyle="bold" />
@@ -101,6 +103,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:text="bắt đầu: 16/01 - 06:00"
+                                    android:id="@+id/txt_bat_dau"
                                     android:textSize="@dimen/_12ssp"
                                     android:textStyle="bold" />
 
@@ -109,6 +112,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:text="kết thúc: 16/01 - 06:00"
+                                    android:id="@+id/txt_ket_thuc"
                                     android:textSize="@dimen/_12ssp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -117,6 +121,9 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
                             android:background="#5E000000" />
 
                         <LinearLayout
@@ -126,13 +133,14 @@
                             <androidx.recyclerview.widget.RecyclerView
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/_50sdp"
-                                android:layout_weight="7"
-                                android:padding="@dimen/_10sdp" />
+                                android:id="@+id/recyclerview_tien_hanh_dat_ve"
+                                android:layout_weight="6"
+                                android:padding="@dimen/_4sdp" />
 
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/_50sdp"
-                                android:layout_weight="3"
+                                android:layout_weight="4"
                                 android:gravity="right"
                                 android:orientation="vertical">
 
@@ -142,7 +150,9 @@
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:ellipsize="end"
                                     android:maxLines="1"
+                                    android:layout_marginRight="@dimen/_8sdp"
                                     android:text="Ngồi Mềm điều hoà"
+                                    android:id="@+id/txt_ten_loai_ghe"
                                     android:textSize="@dimen/_12ssp"
                                     android:textStyle="bold" />
 
@@ -152,6 +162,8 @@
                                     android:layout_marginTop="@dimen/_5sdp"
                                     android:text="632.000đ"
                                     android:textColor="#F30808"
+                                    android:id="@+id/txt_tong_tien"
+                                    android:layout_marginRight="@dimen/_8sdp"
                                     android:textSize="@dimen/_12ssp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -173,7 +185,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:paddingLeft="@dimen/_10sdp"
-                    android:text="Thông tin người mua"
+                    android:text="@string/thong_tin_nguoi_mua"
                     android:textColor="#000"
                     android:textSize="@dimen/_14ssp" />
 
@@ -227,7 +239,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:ellipsize="end"
                             android:maxLines="1"
-                            android:text="Ma doi tuong:"
+                            android:text="Loại đối tuong:"
                             android:textSize="@dimen/_12ssp" />
                     </LinearLayout>
 
@@ -243,6 +255,7 @@
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:text="Họ tên:"
+                            android:id="@+id/txt_ho_ten"
                             android:textColor="#000"
                             android:textSize="@dimen/_12ssp" />
 
@@ -253,7 +266,7 @@
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:text="So cmnd:"
-
+                            android:id="@+id/txt_so_cmnd"
                             android:textColor="#000"
                             android:textSize="@dimen/_12ssp" />
 
@@ -264,6 +277,7 @@
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:text="Email:"
+                            android:id="@+id/txt_email"
                             android:textColor="#000"
                             android:textSize="@dimen/_12ssp" />
 
@@ -273,7 +287,7 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:ellipsize="end"
                             android:maxLines="1"
-                            android:text="Ma doi tuong:"
+                            android:id="@+id/txt_loai_doi_tuong"
                             android:textColor="#000"
                             android:textSize="@dimen/_12ssp" />
                     </LinearLayout>
@@ -293,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:paddingLeft="@dimen/_10sdp"
-                    android:text="Chính sách thoả thuận"
+                    android:text="@string/chinh_sach_thoa_thuan"
                     android:textColor="#000"
                     android:textSize="@dimen/_14ssp" />
 
@@ -307,21 +321,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
                     android:paddingLeft="@dimen/_10sdp">
 
                     <CheckBox
                         android:layout_width="wrap_content"
+                        android:id="@+id/ck_check"
                         android:layout_height="wrap_content" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:text="Tôi đã"
+                        android:text="@string/chinh_sach"
                         android:textColor="#000"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -342,6 +358,7 @@
             android:layout_height="wrap_content"
             android:text="Tổng 1 vé"
             android:textColor="#D5000000"
+            android:id="@+id/txt_tong_so_ve"
             android:layout_marginLeft="@dimen/_8sdp"
             android:textSize="@dimen/_12ssp" />
 
@@ -350,7 +367,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/_20sdp"
             android:layout_toLeftOf="@+id/card_1"
-            android:text="Tổng tiền"
+            android:text="@string/tong_tien"
             android:textColor="#D5000000"
             android:textSize="@dimen/_12ssp" />
 
@@ -371,6 +388,7 @@
                 android:layout_marginRight="@dimen/_7sdp"
                 android:layout_marginBottom="@dimen/_2sdp"
                 android:gravity="center"
+                android:id="@+id/txt_tong_tien_1"
                 android:text="0"
                 android:textColor="#fff"
                 android:textSize="@dimen/_12ssp" />
@@ -378,11 +396,12 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_25sdp"
-            android:text="Tiến hành đặt vé"
+            android:layout_height="@dimen/_40sdp"
+            android:text="@string/tien_hanh_dat_ve"
             android:layout_below="@+id/card_1"
             android:gravity="center"
             android:textColor="#fff"
+            android:id="@+id/txt_tien_hanh_dat_ve"
             android:textSize="@dimen/_14ssp"
             android:layout_marginTop="@dimen/_8sdp"
             android:textStyle="bold"

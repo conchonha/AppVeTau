@@ -197,6 +197,7 @@ public class ChonVeTauActivity extends BaseActivity implements View.OnClickListe
                 }else{
                     Intent intent = new Intent(getApplicationContext(), ThongTinDatVeActivity.class);
                     intent.putExtra(Constain.keyVeTau,mGson.toJson(mListVeTauDaChon));
+                    intent.putExtra(Constain.keyMaChuyen,mGson.toJson(mTauReponse));
                     startActivity(intent);
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
                 }

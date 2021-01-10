@@ -55,4 +55,10 @@
     <string name="tong_tien">Tổng tiền</string>
     <string name="cho">Chỗ</string>
     <string name="chon_toi_da_ve_tau">Chỉ được chọn tối đa 4 vé</string>
+    <string name="thong_tin_khach_di_tau">Thông tin khách đi tàu</string>
+    <string name="thong_tin_nguoi_mua">Thông tin người mua</string>
+    <string name="chinh_sach_thoa_thuan">Chính sách thoả thuận</string>
+    <string name="tien_hanh_dat_ve">Tiến hành đặt vé</string>
+    <string name="chi_tiet_dat_ve">Chi tiết đặt vé</string>
+    <string name="chinh_sach">Tôi đã đọc và đồng ý tuân thủ tất cả các qui định mua vé trực tuyến, các chương trình khuyến mãi của tổng công ty đường sắt Việt Nam và chịu trách nhiệm về tính sác thực của các thông tin trên</string>
 </resources>
