@@ -73,6 +73,7 @@ public class ThongTinDatVeActivity extends BaseActivity implements View.OnClickL
     @Override
     protected void onListenerClicked() {
         mTxtTienHanhDatVe.setOnClickListener(this);
+        findViewById(R.id.img_back).setOnClickListener(this);
         mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -168,6 +169,9 @@ public class ThongTinDatVeActivity extends BaseActivity implements View.OnClickL
                         }
                     });
 
+                break;
+            case R.id.img_back:
+                finish();
                 break;
         }
     }
