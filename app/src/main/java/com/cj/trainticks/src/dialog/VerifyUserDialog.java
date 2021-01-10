@@ -1,5 +1,6 @@
 package com.cj.trainticks.src.dialog;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -127,10 +128,9 @@ public class VerifyUserDialog extends DialogFragment implements View.OnClickList
                 if(mEdtCode.getText().toString().equals(mNumber+"")){
                     SharePrefs sharePrefs = new SharePrefs(getContext());
                     sharePrefs.saveUser(getArguments().getString(Constain.keyUser));
-                    Intent intent = new Intent(getActivity(), MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    getActivity().startActivity(intent);
-                    getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
+
+                    getActivity().setResult(Activity.RESULT_OK);
+                    getActivity().finish();
                 }else{
                     Toast.makeText(getContext(), getString(R.string.verify_user_error), Toast.LENGTH_SHORT).show();
                 }

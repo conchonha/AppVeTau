@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,6 +20,7 @@ import com.cj.trainticks.model.VeTau;
 import com.cj.trainticks.src.adapter.home.ToaAdapter;
 import com.cj.trainticks.src.adapter.home.VeDuocChonAdapter;
 import com.cj.trainticks.src.adapter.home.VetauAdapter;
+import com.cj.trainticks.src.page.user.LoginActivity;
 import com.cj.trainticks.utils.Constain;
 import com.google.gson.Gson;
 
@@ -44,6 +46,7 @@ public class ChonVeTauActivity extends BaseActivity implements View.OnClickListe
     private VeDuocChonAdapter mVeDuocChonAdapter;
     private DecimalFormat mSimpleDateFortmat = new DecimalFormat("#,###,###");
     private String TAG = "ChonVeTauActivity";
+    private final int REQUESTCODE = 1111;
 
     @Override
     protected int getContentView() {
@@ -186,6 +189,18 @@ public class ChonVeTauActivity extends BaseActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUESTCODE && resultCode == RESULT_OK){
+            Intent intent = new Intent(getApplicationContext(), ThongTinDatVeActivity.class);
+            intent.putExtra(Constain.keyVeTau,mGson.toJson(mListVeTauDaChon));
+            intent.putExtra(Constain.keyMaChuyen,mGson.toJson(mTauReponse));
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
+        }
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.img_back:
@@ -195,10 +210,7 @@ public class ChonVeTauActivity extends BaseActivity implements View.OnClickListe
                 if(mListVeTauDaChon.size() == 0){
                     showAlertDialog("Vui lòng chọn ve tàu");
                 }else{
-                    Intent intent = new Intent(getApplicationContext(), ThongTinDatVeActivity.class);
-                    intent.putExtra(Constain.keyVeTau,mGson.toJson(mListVeTauDaChon));
-                    intent.putExtra(Constain.keyMaChuyen,mGson.toJson(mTauReponse));
-                    startActivity(intent);
+                    startActivityForResult(new Intent(getApplicationContext(), LoginActivity.class),REQUESTCODE);
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
                 }
                 break;

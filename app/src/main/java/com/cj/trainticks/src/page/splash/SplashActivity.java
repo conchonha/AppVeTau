@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.cj.trainticks.R;
+import com.cj.trainticks.src.page.main.MainActivity;
 import com.cj.trainticks.src.page.user.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }, 2000);
     }
 }
